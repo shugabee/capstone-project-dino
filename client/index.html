@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DINO</title>
+        <link rel='stylesheet' href="./index.css"/>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+        <script src=".script.js" defer></script>
+    </head>
+
+    <body>
+
+        <div>
+            <h1>Let's meet a dino!</h1>
+        </div>
+
+        <form>
+            <div>
+                <h3>Who will be meeting the dinosaur?</h3>
+                 <input type="text" placeholder="Name"/>
+            </div>
+            <br>
+            <div>
+                <h3>Pick a Dino!</h3>
+                <object>Dinosaurs:</object>
+                <select></select>
+            </div>
+
+            <br>
+
+            
+            <div class="locations">
+                <h3>Choose a Location</h3>
+                <label for="location-one">Beach</label>
+                <input type="radio" name="location" id="location-one"/>
+
+                <label for="location-two">Forest</label>
+                <input type="radio" name="location" id="location-two"/>
+
+                <label for="location-three">Mountain</label>
+                <input type="radio" name="location" id="location-three"/>
+
+                <label for="location-four">Desert</label>
+                <input type="radio" name="location" id="location-four"/>
+            </div>
+
+            <br>    
+
+            <div>
+                <h3>What time of day is it?</h3>
+                <input type="image" src="" alt="Day" name="day" class="btTxt submit" id="day"/>
+                <input type="image" src="" alt="Night" name="night" class="btTxt submit" id="night"/>
+            </div>
+
+
+            <br>
+            <br>
+            <button>Submit</button>
+
+        </form>
+    </body>
+</html>
