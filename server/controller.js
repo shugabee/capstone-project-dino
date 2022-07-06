@@ -1,6 +1,6 @@
 require("dotenv").config();
-const {CONNECTION_STRING} = process.env;
 const Sequelize = require("sequelize");
+const {CONNECTION_STRING} = process.env;
 
 
 const sequelize = new Sequelize(CONNECTION_STRING, {
@@ -12,3 +12,17 @@ const sequelize = new Sequelize(CONNECTION_STRING, {
     }
 });
 
+const getDinosaur = (req, res) => {
+    sequelize.query('select * from dinosaurs')
+    .then(([dinosaur]) => res.status(200).send(dinosaur)) 
+    .catch((error) => console.log(error))
+}
+
+// const getDinosaur = (req, res) => {
+//     sequelize.query('select ')
+// }
+
+
+
+
+module.exports = { getDinosaur }
