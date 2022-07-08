@@ -21,43 +21,22 @@
             <input type ="text" placeholder="name" id="name-input"/>
         </div>
         <br>
-        <!-- <div>
-            <h3>Pick a Dino!</h3>
-            <button id="brachiosaurus-button">Brachiosaurus</button>
-            <button id="stegosaurus-button">Stegosaurus</button>
-            <button id="tyrannosaurus-rex-button">Tyrannosaurus Rex</button>
-            <button id="triceratops-button">Triceratops</button>
-            <button id="ankylosaurus-button">Ankylosaurus</button>
-        </div> -->
-        <br>
-        <!-- <div>
-            <label for="dinosaurs">Pick a Dino!</label>
-            <select name="dinosaurs" id="dinosaurs">
-                <option></option>
-                <option id="brachiosaurus-button">Brachiosaurus</option>
-                <option id="stegosaurus-button">Stegosaurus</option>
-                <option id="tyrannosaurus-rex-button">Tyrannosaurus Rex</option>
-                <option id="triceratops-button">Triceratops</option>
-                <option id="ankylosaurus-button">Ankylosaurus</option>
-            </select>
-        </div> -->
-
+        <h3>Pick a Dino</h3>
         <div class="dinosaurs">
-            <h3>Pick a Dino</h3>
-            <label for="brachiosaurus">Brachiosaurus</label>
-            <input type="radio" name="brachiosaurus" id="brachiosaurus"/>
+            <input type="radio" name="radios" id="brach" value="3"/>
+            <label for="brach">Brachiosaurus</label>
 
-            <label for="stegosaurus">Stegosaurus</label>
-            <input type="radio" name="stegosaurus" id="stegosaurus"/>
+            <input type="radio" name="radios" id="stego" value="5"/>
+            <label for="stego">Stegosaurus</label>
 
-            <label for="tyrannosaurus-rex">Tyrannosaurus-Rex</label>
-            <input type="radio" name="tyrannosaurus-rex" id="tyrannosaurus-rex"/>
+            <input type="radio" name="radios" id ="t-rex" value="4"/>
+            <label for="t-rex">Tyrannosaurus-Rex</label>
 
-            <label for="triceratops">Triceratops</label>
-            <input type="radio" name="triceratops" id="triceratops"/>
+            <input type="radio" name="radios" id="trice" value="2"/>
+            <label for="trice">Triceratops</label>
 
-            <label for="ankylosaurus">Ankylosaurus</label>
-            <input type="radio" name="ankylosaurus" id="ankylosaurus"/>
+            <input type="radio" name="radios" id="ankyl" value="1"/>
+            <label for="ankyl">Ankylosaurus</label>
         </div>
 
         <!-- <div>
@@ -67,7 +46,7 @@
 
         <br>
         <div class="locations">
-            <h3>Choose a Location</h3>
+            <h3>Pick a Location</h3>
             <label for="beach-location">Beach</label>
             <input type="radio" name="beach" id="beach-location"/>
 
@@ -80,14 +59,17 @@
             <label for="desert-location">Desert</label>
             <input type="radio" name="desert" id="desert-location"/>
         </div>
-        <br>
-        <br>
-        <button id="submit-button">Submit</button>
+        
+
     </form>
+
+    <button id="submit-button">Submit</button>
 
     <section id="name-container"></section>
 
-    <section id="picture-container"></section>
+    <section id="picture-container">
+        <img src="{`${data.dinosaur_url}`}" alt="" width="" height="">
+    </section>
 
 </body>
 </html>

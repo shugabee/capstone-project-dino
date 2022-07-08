@@ -12,17 +12,33 @@ const sequelize = new Sequelize(CONNECTION_STRING, {
     }
 });
 
-const getDinosaur = (req, res) => {
-    sequelize.query('select * from dinosaurs')
-    .then(([dinosaur]) => res.status(200).send(dinosaur)) 
-    .catch((error) => console.log(error))
-}
-
 // const getDinosaur = (req, res) => {
-//     sequelize.query('select ')
+//     sequelize.query('select * from dinosaurs')
+//     .then(([dinosaur]) => res.status(200).send(dinosaur)) 
+//     .catch((error) => console.log(error))
 // }
 
+// const getBrach = (req, res) => {
+//     const { dinosaurId } = req.params
+//     console.log(dinosaurId)
+
+//     sequelize.query(`select dinosaurs.dinsaur_id 
+//     from dinosaurs 
+//     where dinosaur_id = ${dinosaurId}`)
+
+//     .then(([dinosaur]) => res.status(200).send(dinosaur[1]))
+//     .catch((error) => console.log(error))
+// }
+
+const getDino = (req, res) => {
+    let { dinosaurId } = req.params 
+
+    sequelize.query(`select dinosaur_url
+    from dinosaurs
+    where dinosaur_id = ${dinosaurId}`)
+
+    .then(([data]) => res.status(200).send(data))
+}
 
 
-
-module.exports = { getDinosaur }
+module.exports = { getDino }
