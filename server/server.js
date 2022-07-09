@@ -11,8 +11,8 @@ app.use(cors());
 
 app.get('/api/dinosaurs/:id', getDinos);
 app.get('/api/locations/:id', getLocations);
-// app.post('/api/createDino', createDino);
-app.delete('/api/deletePicture', deleteDino);
+
+app.delete('/api/delete', deleteDino);
 
 
 

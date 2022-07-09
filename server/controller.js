@@ -1,8 +1,6 @@
 require("dotenv").config();
 const Sequelize = require("sequelize");
-const {CONNECTION_STRING} = process.env;
-
-let globalId = 6
+const {CONNECTION_STRING} = process.env
 
 
 const sequelize = new Sequelize(CONNECTION_STRING, {
@@ -42,12 +40,6 @@ const getLocations = (req, res) => {
 
 
 
-const createDino = (req, res) => {
-    console.log(req.body)
-
-}
-
-
 
 
 
@@ -61,4 +53,4 @@ const deleteDino = (req, res) => {
 }
 
 
-module.exports = { getDinos, getLocations, deleteDino}
+module.exports = { getDinos, getLocations, deleteDino }
