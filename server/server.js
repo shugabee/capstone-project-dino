@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-const {getDinos, getDinoFive} = require('./controller')
+const { getDinos, getLocations } = require('./controller')
 
 const app = express();
 
@@ -10,6 +10,7 @@ app.use(cors());
 
 
 app.get('/api/dinosaurs/:id', getDinos);
+app.get('/api/locations/:id', getLocations);
 
 
 

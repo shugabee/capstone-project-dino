@@ -23,6 +23,16 @@ const getDinos = (req, res) => {
     .then(([data]) => res.status(200).send(data))
 }
 
+const getLocations = (req, res) => {
+    let { id } = req.params
+
+    sequelize.query(`select location_url
+    from locations
+    where location_id = ${id}`)
+
+    .then(([data]) => res.status(200).send(data))
+}
 
 
-module.exports = { getDinos }
+
+module.exports = { getDinos, getLocations }
