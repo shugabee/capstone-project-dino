@@ -36,8 +36,7 @@ const getLocations = (req, res) => {
 
 const createDino = (req, res) => {
     let newDino = {...req.body, dinoId }
-
-    res.status(200).send(data)
+    res.status(200).send(newDino)
     dinoId++
    
 }

@@ -2,6 +2,7 @@ const nameInput = document.querySelector('#name-input');
 const submitBtn = document.querySelector('#submit-button');
 const nameContainer = document.querySelector('#name-container');
 const pictureContainer = document.querySelector('#picture-container');
+const dinoBtnContainer = document.querySelector('.dinosaurs');
 const brachioSelect = document.querySelector('#brach');
 const stegSelect = document.querySelector('#steg');
 const tRexSelect = document.querySelector('#t-rex');
@@ -10,10 +11,13 @@ const ankylSelect = document.querySelector('#ankyl');
 const beachSelect = document.querySelector('#beach-location');
 const forestSelect = document.querySelector('#forest-location');
 const mountainSelect = document.querySelector('#mountain-location');
-const desertSelect = document.querySelector('#desert-location')
-const deletePicture = document.querySelector('#delete-container')
+const desertSelect = document.querySelector('#desert-location');
+const deletePicture = document.querySelector('#delete-container');
 const addForm = document.querySelector('#add-form');
 const form = document.querySelector('form');
+const addDinoSubmit = document.querySelector('#add-dino-submit');
+const dinoName = document.querySelector('#add-dino');
+const dinoUrl = document.querySelector('#dino-url');
 
 
 const getBrach = (event) => {
@@ -149,52 +153,75 @@ desertSelect.addEventListener('click', getDesert);
 
 
 
-
-
-
-
-const dinoName = document.querySelector('#add-dino');
-const dinoUrl = document.querySelector('#dino-url');
-
-
-let body = {
-    dinoName: dinoName.value, 
-    dinoUrl: dinoUrl.value
-}
-
-
 // const createDino = () => {
 //     axios.post(`http://localhost:4000/api/createDino`, body) 
 //     .then(() => {
-//         console.log('yay')
-//     })
+    //         console.log('yay')
+    //     })
     
+    //     .catch((error) => {
+        //         console.log('error')
+        //     })
+        // }
+        
+        
+        // addForm.addEventListener('submit', (event) => {
+            //     event.preventDefault();
+            // })
+            
+
+
+const createDinoBtn = () => {
+    let dinoInput = document.createElement('input');
+    dinoInput.data = dinoUrl.value;
+    dinoInput.type = "radio";
+    dinoInput.name = "radios";
+    dinoInput.label = dinoName.value;
+    dinoBtnContainer.appendChild(dinoBtn);
+}
+/////////
+
+const createNewDino = (event) => {
+    event.preventDefault();
+
+    const reqBody = {
+        dinoName: dinoName.value,
+        dinoUrl: dinoUrl.value
+    }
+    
+    axios.post('http://localhost:4000/api/dinosaur', reqBody)
+    .then((res) => {
+        console.log(res)
+        createDinoBtn(res)
+        dinoName.value = '';
+        dinoUrl.value = '';
+    }) 
+    .catch((error) => {
+        console.log('error')
+    })
+    
+}
+
+addForm.addEventListener('submit', createNewDino);
+/////////
+
+
+
+
+
+// const createDino = (event) =>{
+//     event.preventDefault()
+//     axios.post('http://localhost:4000/api/dinosaur', reqBody)
+//     .then((res) => {
+//         console.log(reqBody)
+//     }) 
 //     .catch((error) => {
 //         console.log('error')
 //     })
 // }
 
 
-addForm.addEventListener('submit', (event) => {
-    event.preventDefault();
-    
-    const reqBody = {
-        dinoName: dinoName.value,
-        dinoUrl: dinoUrl.value
-    }
-
-    const createDino = () =>{
-    axios.post('http://localhost:4000/api/dinosaur', reqBody)
-    .then
-    .catch((error) => {
-        console.log('error')
-    })
-}
-})
-
-
-
-
+// addDinoSubmit.addEventListener('click', createDino);
 
 
 
