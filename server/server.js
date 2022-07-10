@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-const { getDinos, getLocations, deleteDino } = require('./controller')
+const { getDinos, getLocations, createDino, deleteDino } = require('./controller')
 
 const app = express();
 
@@ -11,7 +11,7 @@ app.use(cors());
 
 app.get('/api/dinosaurs/:id', getDinos);
 app.get('/api/locations/:id', getLocations);
-
+app.post('/api/dinosaur', createDino)
 app.delete('/api/delete', deleteDino);
 
 

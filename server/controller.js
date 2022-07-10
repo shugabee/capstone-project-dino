@@ -13,6 +13,8 @@ const sequelize = new Sequelize(CONNECTION_STRING, {
 });
 
 
+let dinoId = 6;
+
 const getDinos = (req, res) => {
     let { id } = req.params 
 
@@ -32,15 +34,13 @@ const getLocations = (req, res) => {
 }
 
 
+const createDino = (req, res) => {
+    let newDino = {...req.body, dinoId }
 
-
-
-
-
-
-
-
-
+    res.status(200).send(data)
+    dinoId++
+   
+}
 
 
 
@@ -53,4 +53,4 @@ const deleteDino = (req, res) => {
 }
 
 
-module.exports = { getDinos, getLocations, deleteDino }
+module.exports = { getDinos, getLocations, createDino, deleteDino }
