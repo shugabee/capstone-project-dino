@@ -234,7 +234,6 @@ const getBrach = (event) => {
 }
 
 
-
 const getDino = (event) => {
     event.preventDefault()
     axios.get(`http://localhost:4000/api/dinosaurs/${event.target.value}`)
@@ -246,22 +245,7 @@ const getDino = (event) => {
     .catch((error) => {
         console.log(error)
     })
-}
-
-for (let i = 0; i < dinosaursInputs.length; i++) {
-    dinosaursInputs[i].addEventListener('change', getDino)
-    }
-
-
-
-// for (let i = 0; i < dinosaursInputs.length; i++) {
-//     if (dinosaursInputs[i].checked) {
-//         getDino();
-//     }
-// }
-
-
-
+};
 
 
 dinoForm.addEventListener('submit', (event) => {
@@ -271,23 +255,48 @@ dinoForm.addEventListener('submit', (event) => {
     nameContainer.appendChild(namePara);
     nameInput.value = '';
     
-    
 
-    // if (createDinoInput.checked) {
-        //     let dinoPic = document.createElement('img')
-    //     dinoPic.src = dinoUrl.value;
-    //     pictureContainer.appendChild(dinoPic);
+
+    // for (let i = 0; i < dinosaursInputs.length; i++) {
+    // if (dinosaursInputs[i].checked) {
+    //     console.log(dinosaursInputs[i])
+    //     getDino();
     // }
-    
+// }
+
+
+
+    if (brachioSelect.checked) {
+        getBrach();
+    }
+});
+
+
+
+
+
+
+
+
+
+// for (let i = 0; i < dinosaursInputs.length; i++) {
+//     dinosaursInputs[i].addEventListener('checked', getDino)
+//     console.log('frogs')
+//     }
+
+
+
+
+
+
+
+
 //     brachioSelect.addEventListener('change', getBrach)
     
-//     if (brachioSelect.checked) {
-//    }
-
 
 //    else if (stegSelect.checked) {
 //      getSteg()
 //     // console.log('stego is checked')
 //    }
 //    else {console.log('no dino yet')}
-})
+
