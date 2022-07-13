@@ -13,7 +13,6 @@ const sequelize = new Sequelize(CONNECTION_STRING, {
 });
 
 
-
 const getDinos = (req, res) => {
     let { id } = req.params 
 
@@ -39,17 +38,12 @@ const createDino = (req, res) => {
         dinoName,
         dinoUrl 
     }
-
-    sequelize.query(`insert into dinosaurs (dinoName, dinoUrl)
-    values (${dinoName}, ${dinoUrl})`)
-    
-        res.status(200).send(newDino)
-        dinoId++
-   
+    sequelize.query(`insert into dinosaurs (dinosaur_name, dinosaur_url)
+    values ('${dinoName}', '${dinoUrl}') returning *`)
+    .then((dino) => {
+        res.status(200).send(dino[0])
+    })
 }
-
-
-
 
 
 

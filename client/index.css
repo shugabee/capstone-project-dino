@@ -68,4 +68,20 @@
 }
 
 
+#picture-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.final-dino-pic {
+    position: absolute;
+    bottom: 10px;
+}
+
+.final-location-pic {
+    width: 800px;
+    
+}
 
