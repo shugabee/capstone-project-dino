@@ -28,7 +28,9 @@ const getLocations = (req, res) => {
     sequelize.query(`select location_url
     from locations
     where location_id = ${id}`)
-    .then(([data]) => res.status(200).send(data))
+    .then(([data]) => {
+        res.status(200).send(data)
+    })
 }
 
 
@@ -39,7 +41,8 @@ const createDino = (req, res) => {
         dinoUrl 
     }
     sequelize.query(`insert into dinosaurs (dinosaur_name, dinosaur_url)
-    values ('${dinoName}', '${dinoUrl}') returning *`)
+    values ('${dinoName}', '${dinoUrl}') 
+    returning *`)
     .then((dino) => {
         res.status(200).send(dino[0])
     })
@@ -48,8 +51,7 @@ const createDino = (req, res) => {
 
 
 const deleteDino = (req, res) => {
-    
-    res.sendStatus(200)
+    res.status(200).send(res)
 }
 
 

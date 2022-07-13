@@ -112,13 +112,11 @@ dinoForm.addEventListener('submit', (event) => {
 
     for (let i = 0; i < dinosaursInputs.length; i++) {
         if (dinosaursInputs[i].checked) {
-            console.log(dinosaursInputs[i])
             getDino(event, dinosaursInputs[i].value);
     }
 } 
     for (let i = 0; i < locationsInputs.length; i++) {
         if (locationsInputs[i].checked) {
-            console.log(locationsInputs[i])
             getLocation(event, locationsInputs[i].value);
         }
 } 
@@ -129,8 +127,25 @@ dinoForm.addEventListener('submit', (event) => {
 
 
 const deletePictureContainer = () => {
-    axios.delete(`http://localhost:4000/api/delete`)
-    .then(() => alert("Your picture has been deleted"))
+    axios.delete(`http://localhost:4000/api/delete/`)
+    .then(() => {
+        pictureContainer.removeChild(locationPic)
+        pictureContainer.removeChile(dinoPic)
+        alert("Your dinosaur left")
+    })
     .catch((error) => console.log(error))
 }
 deletePicture.addEventListener('click', deletePictureContainer)
+
+
+
+
+
+// deletePicture.addEventListener('click', (id) => {
+//     axios.delete(`http://localhost:4000/api/delete/${id}`)
+//     .then(() => {
+//         pictureContainer.textContent = ''
+//         alert("Your dinosaur left")
+//     })
+//     .catch((error) => console.log(error))
+// });
