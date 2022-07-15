@@ -1,5 +1,3 @@
-
-
 .dinosaurs {
     margin: 40px;
     display: flex;
@@ -76,13 +74,26 @@
     align-items: flex-end;
 }
 
+.name-para {
+    font-size: 30px;
+    color: darkblue;
+    display: flex;
+    justify-content: center;
+}
+
 .final-dino-pic {
     position: absolute;
     bottom: 10px;
+}
+
+.final-dino-pic:hover {
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
 }
 
 .final-location-pic {
     width: 800px;
     
 }
+
 

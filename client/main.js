@@ -105,6 +105,7 @@ dinoForm.addEventListener('submit', (event) => {
     const dinosaursInputs = document.querySelectorAll('input[name="radios"]');
     let namePara = document.createElement('p');
     namePara.textContent = `It's nice to meet you ${nameInput.value}!!`;
+    namePara.classList = 'name-para';
     nameContainer.appendChild(namePara);
     nameInput.value = '';
     
@@ -124,18 +125,26 @@ dinoForm.addEventListener('submit', (event) => {
 });
 
 
-
-
 const deletePictureContainer = () => {
-    axios.delete(`http://localhost:4000/api/delete/`)
-    .then(() => {
-        pictureContainer.removeChild(locationPic)
-        pictureContainer.removeChile(dinoPic)
-        alert("Your dinosaur left")
-    })
-    .catch((error) => console.log(error))
+    nameContainer.textContent = ''
+    pictureContainer.textContent = ''
+    alert("Bye!!")
 }
+
 deletePicture.addEventListener('click', deletePictureContainer)
+
+
+
+// const deletePictureContainer = () => {
+//     axios.delete(`http://localhost:4000/api/delete/`)
+//     .then(() => {
+//         pictureContainer.removeChild(locationPic)
+//         pictureContainer.removeChile(dinoPic)
+//         alert("Your dinosaur left")
+//     })
+//     .catch((error) => console.log(error))
+// }
+// deletePicture.addEventListener('click', deletePictureContainer)
 
 
 
