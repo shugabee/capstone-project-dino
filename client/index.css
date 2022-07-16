@@ -86,10 +86,25 @@
     bottom: 10px;
 }
 
+
 .final-dino-pic:hover {
-    animation: shake 0.5s;
-    animation-iteration-count: infinite;
+    transform: translate3d(20,20,20)
 }
+
+
+/* .final-dino-pic:hover {
+    transform: translate(0px, -170px);
+    transition: 1s;
+} */
+
+/* .final-dino-pic:hover {
+    transform: scale(1.5, 1.5);
+} */
+
+/* .final-dino-pic:hover {
+    transform: rotate(360deg);
+    transition: 3s;
+} */
 
 .final-location-pic {
     width: 800px;
