@@ -9,11 +9,8 @@ const dinoForm = document.querySelector('#dino-form');
 const addDinoSubmit = document.querySelector('#add-dino-submit');
 const dinoName = document.querySelector('#add-dino');
 const dinoUrl = document.querySelector('#dino-url');
-
 const dinosaursInputs = document.querySelectorAll('input[name="radios"]');
 const locationsInputs = document.querySelectorAll('input[name="locations-radios');
-
-
 
 
 const createDinoInput = (id) => {
@@ -50,75 +47,47 @@ const createNewDino = (event) => {
     })
     
 }
-
 addForm.addEventListener('submit', createNewDino);
 
 
 
-const getDino = (event, dinoId) => {
+
+dinoForm.addEventListener('submit',(event) => {
     event.preventDefault()
-    axios.get(`http://localhost:4000/api/dinosaurs/${dinoId}`)
-    .then(( { data }) => {
-        let dinoPic = document.createElement('img')
-        dinoPic.src = data[0].dinosaur_url
-        dinoPic.className = 'final-dino-pic'
-        pictureContainer.appendChild(dinoPic)
-    })
-    .catch((error) => {
-        console.log(error)
-    })
-};
-
-
-const getLocation = (event, locationId) => {
-    event.preventDefault()
-    axios.get(`http://localhost:4000/api/locations/${locationId}`)
-    .then(( { data }) => {
-        let locationPic = document.createElement('img')
-        locationPic.src = data[0].location_url
-        locationPic.className = 'final-location-pic'
-        pictureContainer.appendChild(locationPic)
-    })
-    .catch((error) => {
-        console.log(error)
-    })
-};
-
-
-    
-    dinoForm.addEventListener('submit',(event) => {
-        event.preventDefault()
         
-    
     const dinosaursInputs = document.querySelectorAll('input[name="radios"]');
-    let namePara = document.createElement('p');
-    namePara.textContent = `It's nice to meet you ${nameInput.value}!!`;
-    namePara.classList = 'name-para';
-    nameContainer.appendChild(namePara);
-    nameInput.value = '';
     
+    let nameInputField = `${nameInput.value}`
+    let dinoId;
+    let locationId;
     
+
     for (let i = 0; i < dinosaursInputs.length; i++) {
         if (dinosaursInputs[i].checked) {
-            getDino(event, dinosaursInputs[i].value);
+            dinoId = dinosaursInputs[i].value
+            // getDino(event, dinosaursInputs[i].value);
         }
     } 
     for (let i = 0; i < locationsInputs.length; i++) {
         if (locationsInputs[i].checked) {
-            getLocation(event, locationsInputs[i].value);
+            locationId = locationsInputs[i].value
+            // getLocation(event, locationsInputs[i].value);
         }
     } 
     
-    
+    window.location.href = `picture.html?dinoId=${dinoId}&locationId=${locationId}&nameInput=${nameInputField}`
 });
 
 
-const deletePictureContainer = () => {
-    nameContainer.textContent = ''
-    pictureContainer.textContent = ''
-    alert("Bye!!")
-}
 
-deletePicture.addEventListener('click', deletePictureContainer);
+
+
+// const deletePictureContainer = () => {
+//     nameContainer.textContent = ''
+//     pictureContainer.textContent = ''
+//     alert("Bye!!")
+// }
+
+// deletePicture.addEventListener('click', deletePictureContainer);
 
 

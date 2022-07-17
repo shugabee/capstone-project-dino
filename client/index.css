@@ -1,9 +1,31 @@
+h1 {
+    text-align: center;
+}
+
+#all-data {
+    display: flex;
+    text-align: center;
+}
+
+/* #dino-meet-input {
+    text-align: center;
+} */
+
 .dinosaurs {
     margin: 40px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
+
+#add-form {
+    margin-left: 60px;
+}
+
+.add-dino-heading {
+    padding-top: 100px;
+}
+
 
 .dinosaurs input[type="radio"] {
     opacity: 0;
@@ -74,7 +96,7 @@
     align-items: flex-end;
 }
 
-.name-para {
+.name-greeting {
     font-size: 30px;
     color: darkblue;
     display: flex;
@@ -87,9 +109,9 @@
 }
 
 
-.final-dino-pic:hover {
+/* .final-dino-pic:hover {
     transform: translate3d(20,20,20)
-}
+} */
 
 
 /* .final-dino-pic:hover {
@@ -98,13 +120,13 @@
 } */
 
 /* .final-dino-pic:hover {
-    transform: scale(1.5, 1.5);
+    transform: scale(2, 2);
 } */
 
-/* .final-dino-pic:hover {
-    transform: rotate(360deg);
-    transition: 3s;
-} */
+.final-dino-pic:hover {
+    transform: rotate(-360deg);
+    transition: 1s;
+}
 
 .final-location-pic {
     width: 800px;
