@@ -1,54 +1,69 @@
 header {
     height: 20vh;
     width: 100%;
-    background-color: #52AA8A;
+    background-color: hsla(98, 76%, 64%, 0.796);
 }
 
 body {
     margin: auto;
-    background-color: #f0f4ec;
+    background-color: hsl(180, 11%, 98%);
 }
 
 h1 {
     font-size: 60px;
     text-align: center;
-    color: #134611;
+    color: #000000;
     margin-top: 0;
 }
 
-h3 {
+#dino-meet-input {
     text-align: center;
-    height: 7vh;
-    width: 45vw;
-    background-color: #3aaed8;
-    color: #134611;
-  
+    padding-top: 2px;
+    padding-bottom: 80px;
+    margin-bottom: 80px;
+    background-color: hsl(98, 76%, 65%);
+    height: 10px;
+    width: 100%;
+} 
+
+/* h3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    height: 6vh;
+    width: 100%;
+    background-color: hsl(201, 100%, 36%);
+    color: #000000;
+} */
+
+#add-form {
+    text-align: center;
+
+}
+.add-dino-heading {
+    background-color: #5c85e6;
+    height: 50px;
+}
+
+.form-heading {
+    background-color: #5c85e6;
+    height: 60px;
+    width: 100%;
 }
 
 #all-data {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+    text-align: center; 
 }
 
-/* #dino-meet-input {
-    text-align: center;
-} */
 
 .dinosaurs {
-    margin: 40px;
+    margin: 90px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
 
-#add-form {
-    height: 20px;
-}
-
-/* .add-dino-heading {
-    padding-top: px;
-} */
 
 .dinosaurs input[type="radio"] {
     opacity: 0;
@@ -58,22 +73,22 @@ h3 {
 
 .dinosaurs label {
     display: inline-block;
-    background-color: #2bd9fe;
+    background-color: hsl(98, 76%, 65%);
     padding: 30px 30px;
     font-family: sans-serif, Arial;
     font-size: 18px;
-    color: #32292f;
-    border: 2px solid #3aaed8;
+    color: #000000;
+    border: 2px solid hsl(98, 76%, 65%);
     border-radius: 20px;
 }
 
 .dinosaurs label:hover{
-    background-color: #e8e8e1;
+    background-color: #fefae0;
 }
 
 .dinosaurs input[type="radio"]:checked + label {
-    background-color: #e8e8e1;
-    border-color: #3aaed8;
+    background-color: #fefae0;
+    border-color: hsl(201, 100%, 29%);
 }
 
 .locations {
@@ -91,22 +106,22 @@ h3 {
 
 .locations label {
     display: inline-block;
-    background-color: #2bd9fe;
+    background-color: hsl(98, 76%, 65%);
     padding: 30px 40px;
     font-family: sans-serif, Arial;
     font-size: 18px;
-    color: #32292f;
-    border: 2px solid #3aaed8;
+    color: #000000;
+    border: 2px solid hsl(98, 48%, 53%);
     border-radius: 20px;
 }
 
 .locations label:hover {
-    background-color: #e8e8e1;
+    background-color: #fefae0;
 }
 
 .locations input[type="radio"]:checked + label {
-    background-color: #e8e8e1;
-    border-color: #3aaed8;
+    background-color: #fefae0;
+    border-color: hsl(201, 100%, 29%);
 }
 
 #picture-container {
@@ -116,21 +131,15 @@ h3 {
     align-items: flex-end;
 }
 
-/* #name-container {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-} */
+#name-container {
+    text-align: center;
+}
 
 .name-greeting {
     font-size: 30px;
     font-family: 'Fredoka One';
-    /* background-color: rgb(150, 224, 76); */
-    /* height: 90px; */
-    color: rgb(4, 3, 61);
-    /* display: flex;
-    justify-content: center;
-    position: absolute; */
+    color: #5c85e6;
+    
 }
 
 .final-dino-pic {
@@ -150,11 +159,11 @@ h3 {
 }
 
 .dino-pic-large:hover {
-    /* transform: scale(.2, .2); */
-    animation: left-to-right 3s ease-in forwards;
+    transform: scale(.2, .2);
+    /* animation: left-to-right 3s ease-in forwards; */
 }
 
-@keyframes left-to-right {
+/* @keyframes left-to-right {
     0% {
         transform: translateX(0%);
     }
@@ -168,7 +177,7 @@ h3 {
         transform: translateX(100%);
 
     }
-}
+} */
 
 .dino-pic-flip:hover {
     transform: rotate(-360deg);
@@ -188,10 +197,17 @@ h3 {
     transition: 2s;
 } */
 
-#new-dino-button {
 
-    width:25%;
-    height:60px;
-    background-color: #80ca5c;
+#new-dino-button-holder {
+    padding-top: 20px;
+    text-align: center;
+}
+
+
+#new-dino-button {
+    width: 250px;
+    height: 60px;
+    border-radius: 10%;
+    background-color: hsl(98, 76%, 65%);
 }
 

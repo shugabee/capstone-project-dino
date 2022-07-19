@@ -15,24 +15,24 @@
         <h1>LET'S MEET A DINOSAUR!</h1>
     </header>
     
-    
     <div id="dino-meet-input">
         <h3>Who will be meeting the dinosaur?</h3>
         <input type ="text" placeholder="name" id="name-input"/>
     </div>
 
+    <div>
+        <form id="add-form">
+        <h3 class="add-dino-heading">Add your own dino friend!</h3>
+        <input type="text" placeholder="dinosaur-name" id="add-dino"/>
+        <input type="text" placeholder="url" id="dino-url"/>
+        <button id= "add-dino-submit" type="submit">Add Dino</button>
+    </form>
+    </div>
     
-    <br>
-    <br>
-    <br>
-    <br>
-    
+    <section id="all-data">
     <form id="dino-form">
-        
-        
-        <br>
-        <h3>Pick a Dino</h3>
         <div class="dinosaurs">
+        <h3 class="form-heading">Pick a Dino</h3>
             <input type="radio" name="radios" id="brach" value="3"/>
             <label for="brach">Brachiosaurus</label>
             
@@ -47,11 +47,14 @@
             
             <input type="radio" name="radios" id="ankyl" value="1"/>
             <label for="ankyl">Ankylosaurus</label>
+
+            <input type="radio" name="radios" id="raptor" value="26"/>
+            <label for="raptor">Raptor</label>
         </div>
         
-        <br>
-        <h3>Pick a Location</h3>
+    
         <div class="locations">
+        <h3 class="form-heading">Pick a Location</h3>
             <input type="radio" name="locations-radios" id="beach-location" value="1"/>
             <label for="beach-location">Beach</label>
             
@@ -73,11 +76,7 @@
             <input type="radio" name="locations-radios" id="dino-park-location" value="7"/>
             <label for="dino-park-location">Dinosaur Park</label>
         </div>
-        
-        <br>
-        <br>
         <button id="submit-button">Submit</button>
-        
     </form>
     
     <form id="add-form">
