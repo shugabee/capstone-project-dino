@@ -44,6 +44,7 @@ const createDino = (req, res) => {
     returning *`)
     .then((dino) => {
         res.status(200).send(dino[0])
+        console.log(dino[0])
     })
 };
 
