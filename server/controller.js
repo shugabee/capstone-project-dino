@@ -1,6 +1,6 @@
 require("dotenv").config();
 const Sequelize = require("sequelize");
-const {CONNECTION_STRING} = process.env
+const {CONNECTION_STRING} = process.env;
 
 
 const sequelize = new Sequelize(CONNECTION_STRING, {
@@ -21,7 +21,7 @@ const getDinos = (req, res) => {
     where dinosaur_id = ${id}`)
 
     .then(([data]) => res.status(200).send(data))
-}
+};
 
 const getLocations = (req, res) => {
     let { id } = req.params
@@ -31,8 +31,7 @@ const getLocations = (req, res) => {
     .then(([data]) => {
         res.status(200).send(data)
     })
-}
-
+};
 
 const createDino = (req, res) => {
     let { dinoName, dinoUrl } = req.body
@@ -46,13 +45,13 @@ const createDino = (req, res) => {
     .then((dino) => {
         res.status(200).send(dino[0])
     })
-}
+};
 
 
 
 const deleteDino = (req, res) => {
     res.status(200).send(res)
-}
+};
 
 
-module.exports = { getDinos, getLocations, createDino, deleteDino }
+module.exports = { getDinos, getLocations, createDino, deleteDino };

@@ -20,7 +20,18 @@ const getDino = () => {
     .then(( { data }) => {
         let dinoPic = document.createElement('img')
         dinoPic.src = data[0].dinosaur_url
-        dinoPic.className = 'final-dino-pic'
+        
+        let classesArr = [
+            'dino-pic-large',
+            'dino-pic-flip',
+            'dino-pic-jump'
+        ];
+
+        let randomSelection = 
+            classesArr[Math.ceil(Math.random()*classesArr.length - 1)];
+                console.log(randomSelection);
+        dinoPic.classList.add('final-dino-pic', randomSelection)
+       
         pictureContainer.appendChild(dinoPic)
     })
     .catch((error) => {
@@ -41,6 +52,9 @@ const getLocation = () => {
     })
 };
 
+
+
 nameInputGreeting()
 getDino()
 getLocation()
+
