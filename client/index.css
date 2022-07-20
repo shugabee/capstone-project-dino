@@ -1,12 +1,12 @@
 header {
     height: 20vh;
     width: 100%;
-    background-color: hsla(98, 76%, 64%, 0.796);
+    background-color: hsl(36, 93%, 52%);
 }
 
 body {
     margin: auto;
-    background-color: hsl(180, 11%, 98%);
+    background-color: hsl(240, 100%, 99%);
 }
 
 h1 {
@@ -21,7 +21,7 @@ h1 {
     padding-top: 2px;
     padding-bottom: 80px;
     margin-bottom: 80px;
-    background-color: hsl(98, 76%, 65%);
+    background-color: hsl(0, 95%, 61%);
     height: 10px;
     width: 100%;
 } 
@@ -42,12 +42,12 @@ h1 {
 
 }
 .add-dino-heading {
-    background-color: #5c85e6;
+    background-color: #e65ccd;
     height: 50px;
 }
 
 .form-heading {
-    background-color: #5c85e6;
+    background-color: #000000;
     height: 60px;
     width: 100%;
 }
@@ -73,7 +73,7 @@ h1 {
 
 .dinosaurs label {
     display: inline-block;
-    background-color: hsl(98, 76%, 65%);
+    background-color: hsl(187, 76%, 65%);
     padding: 30px 30px;
     font-family: sans-serif, Arial;
     font-size: 18px;
@@ -106,7 +106,7 @@ h1 {
 
 .locations label {
     display: inline-block;
-    background-color: hsl(98, 76%, 65%);
+    background-color: hsl(0, 23%, 78%);
     padding: 30px 40px;
     font-family: sans-serif, Arial;
     font-size: 18px;
