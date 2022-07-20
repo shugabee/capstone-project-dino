@@ -20,7 +20,10 @@ const getDinos = (req, res) => {
     from dinosaurs
     where dinosaur_id = ${id}`)
 
-    .then(([data]) => res.status(200).send(data))
+    .then(([data]) => {
+        res.status(200).send(data)
+    })
+    .catch((error) => console.log(error))
 };
 
 const getLocations = (req, res) => {
@@ -31,21 +34,19 @@ const getLocations = (req, res) => {
     .then(([data]) => {
         res.status(200).send(data)
     })
+    .catch((error) => console.log(error))
 };
 
 const createDino = (req, res) => {
     let { dinoName, dinoUrl } = req.body
-    let newDino = {
-        dinoName,
-        dinoUrl 
-    }
+  
     sequelize.query(`insert into dinosaurs (dinosaur_name, dinosaur_url)
     values ('${dinoName}', '${dinoUrl}') 
     returning *`)
     .then((dino) => {
         res.status(200).send(dino[0])
-        console.log(dino[0])
     })
+    .catch((error) => console.log(error))
 };
 
 

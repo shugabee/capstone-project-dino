@@ -1,28 +1,30 @@
 header {
-    height: 20vh;
+    background-image: url('https://drive.google.com/uc?export=view&id=1AO0uC141khtmN6q0VVmELgoj6J7npf1s');
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    background-color: hsl(36, 93%, 52%);
 }
 
 body {
     margin: auto;
-    background-color: hsl(240, 100%, 99%);
+    background-color: hsla(197, 94%, 93%, 0.132);
+    font-family: 'Fredoka One';
 }
 
 h1 {
     font-size: 60px;
-    text-align: center;
-    color: #000000;
+    color: #2d1f08;
     margin-top: 0;
 }
 
 #dino-meet-input {
     text-align: center;
     padding-top: 2px;
-    padding-bottom: 80px;
-    margin-bottom: 80px;
-    background-color: hsl(0, 95%, 61%);
-    height: 10px;
+    padding-bottom: 20px;
+    background-color: #99d98c;
+    height: 100px;
     width: 100%;
 } 
 
@@ -39,31 +41,51 @@ h1 {
 
 #add-form {
     text-align: center;
-
+    background-color: hsla(198, 100%, 78%, 0.132);
+    /* background-color: hsl(115, 52%, 62%); */
+    padding-top: 10px;
+    padding-bottom: 20px;
+    margin-bottom: 100px;
 }
+
 .add-dino-heading {
-    background-color: #e65ccd;
-    height: 50px;
+    width: 100%;
+    vertical-align: center;
+    text-align: center;
+}
+
+#add-dino-submit{
+    display: block;
+    margin: auto;
+    background: #a98467;
+    height: 40px;
+    width: 100px;
+    border-style: solid;
+    border-color: #856750;
+    border-radius: 5px;
+    color: black;
+    font-size: 15px;
+    font-family: 'Fredoka One';
 }
 
 .form-heading {
-    background-color: #000000;
-    height: 60px;
-    width: 100%;
+    height: 50px;
+    background-color: #6a994e;
 }
 
-#all-data {
-    text-align: center; 
+#dino-form {
+    text-align: center;
 }
 
 
 .dinosaurs {
-    margin: 90px;
+    margin: 60px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    align-items: center;
+    gap: 20px;
 }
-
 
 .dinosaurs input[type="radio"] {
     opacity: 0;
@@ -71,15 +93,20 @@ h1 {
     width: 0;
 }
 
-.dinosaurs label {
+.dinosaurs label {   
     display: inline-block;
-    background-color: hsl(187, 76%, 65%);
-    padding: 30px 30px;
+    border: 3px solid hsl(114, 25%, 41%);
+    border-radius: 20%;
+    background-color: #99d98c;
+    height: 150px;
+    width: 150px;
+    cursor:pointer;
+    color: #000000; 
+    text-align: center;
+    vertical-align: middle;
     font-family: sans-serif, Arial;
-    font-size: 18px;
-    color: #000000;
-    border: 2px solid hsl(98, 76%, 65%);
-    border-radius: 20px;
+    font-size: 16px;
+    padding: 20px, 20px;
 }
 
 .dinosaurs label:hover{
@@ -88,14 +115,16 @@ h1 {
 
 .dinosaurs input[type="radio"]:checked + label {
     background-color: #fefae0;
-    border-color: hsl(201, 100%, 29%);
+    border-color: hsl(114, 22%, 44%);
 }
 
 .locations {
-    margin: 40px;
+    margin: 90px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    align-items: center;
+    gap: 20px;
 }
 
 .locations input[type="radio"] {
@@ -106,13 +135,18 @@ h1 {
 
 .locations label {
     display: inline-block;
-    background-color: hsl(0, 23%, 78%);
-    padding: 30px 40px;
+    border: 3px solid hsl(114, 25%, 41%);
+    border-radius: 20%;
+    background-color: #99d98c;
+    height: 150px;
+    width: 150px;
+    cursor:pointer;
+    color: #000000; 
+    text-align: center;
+    vertical-align: middle;
     font-family: sans-serif, Arial;
-    font-size: 18px;
-    color: #000000;
-    border: 2px solid hsl(98, 48%, 53%);
-    border-radius: 20px;
+    font-size: 16px;
+    padding: 20px, 20px;
 }
 
 .locations label:hover {
@@ -121,7 +155,7 @@ h1 {
 
 .locations input[type="radio"]:checked + label {
     background-color: #fefae0;
-    border-color: hsl(201, 100%, 29%);
+    border-color: hsl(114, 22%, 44%);
 }
 
 #picture-container {
@@ -136,10 +170,9 @@ h1 {
 }
 
 .name-greeting {
-    font-size: 30px;
+    font-size: 50px;
     font-family: 'Fredoka One';
     color: #5c85e6;
-    
 }
 
 .final-dino-pic {
@@ -154,39 +187,22 @@ h1 {
     transform: translate3d(20,20,20)
 } */
 
+.dino-pic-shift:hover {
+    transform: translateX(200px);
+    transform: translateX(-400px);
+}
+
 .dino-pic-jump:hover {
     transform: translate(0px, -170px);
 }
 
 .dino-pic-large:hover {
     transform: scale(.2, .2);
-    /* animation: left-to-right 3s ease-in forwards; */
 }
-
-/* @keyframes left-to-right {
-    0% {
-        transform: translateX(0%);
-    }
-    33% {
-        transform: translateY(100%);
-    }
-    66% {
-        transform: translateX(100%) translateY(100%);
-    }
-    100% {
-        transform: translateX(100%);
-
-    }
-} */
 
 .dino-pic-flip:hover {
     transform: rotate(-360deg);
 }
-
-
-
-
-
 
 .final-location-pic {
     width: 90vw;
@@ -199,15 +215,48 @@ h1 {
 
 
 #new-dino-button-holder {
-    padding-top: 20px;
+    padding-top: 70px;
     text-align: center;
+    margin-bottom: 30px;
 }
-
 
 #new-dino-button {
-    width: 250px;
+    background: hsl(115, 52%, 62%);
     height: 60px;
-    border-radius: 10%;
-    background-color: hsl(98, 76%, 65%);
+    width: 500px;
+    border-style: solid;
 }
 
+#new-dino-button:hover {
+    background-color: hsl(115, 32%, 47%);
+}
+
+a {
+    color: black;
+    font-size: 25px;
+    font-family: 'Fredoka One';
+}
+
+#submit-button {
+    background: #9cc9dd;
+    height: 60px;
+    width: 170px;
+    padding-bottom: 10px;
+    border-style: solid;
+    border-color: #56add2;
+    border-radius: 5px;
+    color: black;
+    font-size: 25px;
+    font-family: 'Fredoka One';
+}
+
+#submit-button:hover {
+    box-shadow: inset 0 0 0 2em var(--hover);
+    background: #75a7bd;
+}
+
+footer {
+    margin-top: 50px;
+    background-image: url('https://drive.google.com/uc?export=view&id=1ckjkdYPIrFnnLX1QOsXVHecpAzongn6W');
+    height: 4vh;
+}

@@ -5,7 +5,7 @@ const dinoName = document.querySelector('#add-dino');
 const dinoUrl = document.querySelector('#dino-url');
 const dinosaursInputs = document.querySelectorAll('input[name="radios"]');
 const locationsInputs = document.querySelectorAll('input[name="locations-radios"]');
-
+const dinoBtnContainer = document.querySelector('.dinosaurs');
 
 const createDinoInput = (id) => {
     let dinoLabel = document.createElement('label');
@@ -49,6 +49,7 @@ dinoForm.addEventListener('submit',(event) => {
     event.preventDefault()
         
     const dinosaursInputs = document.querySelectorAll('input[name="radios"]');
+    const locationsInputs = document.querySelectorAll('input[name="locations-radios"]');
     
     let nameInputField = `${nameInput.value}`
     let dinoId;
@@ -58,13 +59,33 @@ dinoForm.addEventListener('submit',(event) => {
     for (let i = 0; i < dinosaursInputs.length; i++) {
         if (dinosaursInputs[i].checked) {
             dinoId = dinosaursInputs[i].value
-        }
-    } 
+        }   
+    };
+        
+
+
     for (let i = 0; i < locationsInputs.length; i++) {
         if (locationsInputs[i].checked) {
             locationId = locationsInputs[i].value
         }
+        
     };
+
+    if(!nameInputField) {
+        alert('Oops, you need to add a name!')
+        return
+    };
+
+   if(!dinoId) {
+       alert('Oops, you need to pick a dinosaur!')
+       return
+   };
+
+   if(!locationId) {
+       alert('Oops, you need to pick a location!')
+       return
+   };
+   
    
 
     window.location.href = `picture.html?dinoId=${dinoId}&locationId=${locationId}&nameInput=${nameInputField}`;

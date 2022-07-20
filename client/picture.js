@@ -5,7 +5,7 @@ const params = new URLSearchParams(window.location.search);
 
 const dinoId = params.get("dinoId");
 const locationId = params.get("locationId");
-const nameInput = params.get("nameInput")
+const nameInput = params.get("nameInput");
 
 
 const nameInputGreeting = () => {
@@ -24,7 +24,8 @@ const getDino = () => {
         let classesArr = [
             'dino-pic-large',
             'dino-pic-flip',
-            'dino-pic-jump'
+            'dino-pic-jump',
+            'dino-pic-shift'
         ];
 
         let randomSelection = 
@@ -54,7 +55,7 @@ const getLocation = () => {
 
 
 
-nameInputGreeting()
-getDino()
-getLocation()
+nameInputGreeting();
+getDino();
+getLocation();
 

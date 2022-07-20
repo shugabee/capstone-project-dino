@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DINO</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
     <link rel='stylesheet' href="./index.css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.0.0-alpha.1/axios.min.js" integrity="sha512-xIPqqrfvUAc/Cspuj7Bq0UtHNo/5qkdyngx6Vwt+tmbvTLDszzXM0G6c91LXmGrRx8KEPulT+AfOOez+TeVylg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>    
     <script src="./main.js" defer="defer"></script>
@@ -22,41 +25,53 @@
 
     <div>
         <form id="add-form">
-        <h3 class="add-dino-heading">Add your own dino friend!</h3>
+        <h3 class="add-dino-heading">If you'd like, you can add your own dino friend!</h3>
         <input type="text" placeholder="dinosaur-name" id="add-dino"/>
         <input type="text" placeholder="url" id="dino-url"/>
         <button id= "add-dino-submit" type="submit">Add Dino</button>
-    </form>
+        </form>
     </div>
     
-    <section id="all-data">
+
     <form id="dino-form">
+        <h3 class="form-heading">Pick a Dinosaur</h3>
         <div class="dinosaurs">
-        <h3 class="form-heading">Pick a Dino</h3>
-            <input type="radio" name="radios" id="brach" value="3"/>
-            <label for="brach">Brachiosaurus</label>
-            
-            <input type="radio" name="radios" id="steg" value="5"/>
-            <label for="steg">Stegosaurus</label>
-            
-            <input type="radio" name="radios" id ="t-rex" value="4"/>
-            <label for="t-rex">Tyrannosaurus-Rex</label>
-            
-            <input type="radio" name="radios" id="tri" value="2"/>
-            <label for="tri">Triceratops</label>
-            
             <input type="radio" name="radios" id="ankyl" value="1"/>
             <label for="ankyl">Ankylosaurus</label>
 
+            <input type="radio" name="radios" id="brach" value="3"/>
+            <label for="brach">Brachiosaurus</label>
+            
+            <input type="radio" name="radios" id="plesiosaurus" value="42"/>
+            <label for="plesiosaurus">Plesiosaurus</label>
+
             <input type="radio" name="radios" id="raptor" value="26"/>
             <label for="raptor">Raptor</label>
+
+            <input type="radio" name="radios" id="steg" value="5"/>
+            <label for="steg">Stegosaurus</label>
+            
+            <input type="radio" name="radios" id="tri" value="2"/>
+            <label for="tri">Triceratops</label>
+
+            <input type="radio" name="radios" id ="t-rex" value="4"/>
+            <label for="t-rex">Tyrannosaurus-Rex</label>
         </div>
         
     
-        <div class="locations">
         <h3 class="form-heading">Pick a Location</h3>
+            <div class="locations">
             <input type="radio" name="locations-radios" id="beach-location" value="1"/>
             <label for="beach-location">Beach</label>
+            
+            <input type="radio" name="locations-radios" id="city-location" value="6"/>
+            <label for="city-location">City</label>
+            
+            <input type="radio" name="locations-radios" id="desert-location" value="2"/>
+            <label for="desert-location">Desert</label>
+           
+            <input type="radio" name="locations-radios" id="dino-park-location" value="7"/>
+            <label for="dino-park-location">Dinosaur Park</label>
             
             <input type="radio" name="locations-radios" id="forest-location" value="4"/>
             <label for="forest-location">Forest</label>
@@ -64,21 +79,17 @@
             <input type="radio" name="locations-radios" id="mountain-location" value="3"/>
             <label for="mountain-location">Mountain</label>
             
-            <input type="radio" name="locations-radios" id="desert-location" value="2"/>
-            <label for="desert-location">Desert</label>
+            <input type="radio" name="locations-radios" id="sea-location" value="8"/>
+            <label for="sea-location">Sea</label>
             
             <input type="radio" name="locations-radios" id="space-location" value="5"/>
             <label for="space-location">Space</label>
-            
-            <input type="radio" name="locations-radios" id="city-location" value="6"/>
-            <label for="city-location">City</label>
-            
-            <input type="radio" name="locations-radios" id="dino-park-location" value="7"/>
-            <label for="dino-park-location">Dinosaur Park</label>
         </div>
+
         <button id="submit-button">Submit</button>
     </form>
-    
+   
+    <footer></footer>
     
     
 </body>
