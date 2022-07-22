@@ -31,8 +31,6 @@ const createNewDino = (event) => {
     
     axios.post('http://localhost:4000/api/dinosaur', reqBody)
     .then((res) => {
-        console.log(res)
-        console.log(res.data[0].dinosaur_id)
         createDinoInput(res.data[0].dinosaur_id)
         dinoName.value = '';
         dinoUrl.value = '';
@@ -62,8 +60,6 @@ dinoForm.addEventListener('submit',(event) => {
         }   
     };
         
-
-
     for (let i = 0; i < locationsInputs.length; i++) {
         if (locationsInputs[i].checked) {
             locationId = locationsInputs[i].value

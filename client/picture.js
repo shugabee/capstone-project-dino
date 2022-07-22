@@ -25,15 +25,14 @@ const getDino = () => {
             'dino-pic-large',
             'dino-pic-flip',
             'dino-pic-jump',
-            'dino-pic-shift'
+            'dino-pic-flip-two'
         ];
 
         let randomSelection = 
             classesArr[Math.ceil(Math.random()*classesArr.length - 1)];
-                console.log(randomSelection);
-        dinoPic.classList.add('final-dino-pic', randomSelection)
+        dinoPic.classList.add('final-dino-pic', randomSelection);
        
-        pictureContainer.appendChild(dinoPic)
+        pictureContainer.appendChild(dinoPic);
     })
     .catch((error) => {
         console.log(error)

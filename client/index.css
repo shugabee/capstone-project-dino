@@ -1,6 +1,10 @@
+html * {
+    font-family: 'Fredoka One';
+}
+
 header {
-    background-image: url('https://drive.google.com/uc?export=view&id=1AO0uC141khtmN6q0VVmELgoj6J7npf1s');
-    height: 400px;
+    background-image: url('https://drive.google.com/uc?export=view&id=1hZPWwxlxLj74iWYOFjkm8cfv18HBQZ6L');
+    height: 450px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,8 +13,11 @@ header {
 
 body {
     margin: auto;
-    background-color: hsla(197, 94%, 93%, 0.132);
-    font-family: 'Fredoka One';
+    background-color: hsla(198, 56%, 92%, 0.208);
+}
+
+input[type='text'] {
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 h1 {
@@ -22,30 +29,18 @@ h1 {
 #dino-meet-input {
     text-align: center;
     padding-top: 2px;
-    padding-bottom: 20px;
     background-color: #99d98c;
     height: 100px;
     width: 100%;
+    color:#2d1f08;
 } 
-
-/* h3 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: auto;
-    height: 6vh;
-    width: 100%;
-    background-color: hsl(201, 100%, 36%);
-    color: #000000;
-} */
 
 #add-form {
     text-align: center;
+    color:#2d1f08;
     background-color: hsla(198, 100%, 78%, 0.132);
-    /* background-color: hsl(115, 52%, 62%); */
     padding-top: 10px;
-    padding-bottom: 20px;
-    margin-bottom: 100px;
+    padding-bottom: 30px;
 }
 
 .add-dino-heading {
@@ -56,30 +51,42 @@ h1 {
 
 #add-dino-submit{
     display: block;
-    margin: auto;
+    margin: 1rem auto 0;
     background: #a98467;
     height: 40px;
     width: 100px;
     border-style: solid;
     border-color: #856750;
     border-radius: 5px;
-    color: black;
+    color: #2d1f08;
     font-size: 15px;
     font-family: 'Fredoka One';
+    cursor: pointer;
+}
+
+#add-dino-submit:hover{
+    background-color: #c4b1a3;
 }
 
 .form-heading {
-    height: 50px;
-    background-color: #6a994e;
+   background-color: #9cc9dd;
+   display: inline-block;
+   width: 67vw;
+   height: 100%;
+   border-style: solid;
+   border-color:#56add2;
+   border-width: 2px;
+   border-radius: 5px;
+   color:#2d1f08;
 }
 
 #dino-form {
     text-align: center;
+    margin-top: 80px;
 }
 
-
 .dinosaurs {
-    margin: 60px;
+    margin: 40px 220px 80px 220px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -93,20 +100,19 @@ h1 {
     width: 0;
 }
 
-.dinosaurs label {   
-    display: inline-block;
+.dinosaurs label {  
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: 3px solid hsl(114, 25%, 41%);
     border-radius: 20%;
     background-color: #99d98c;
     height: 150px;
     width: 150px;
     cursor:pointer;
-    color: #000000; 
+    color: #2d1f08;
     text-align: center;
-    vertical-align: middle;
-    font-family: sans-serif, Arial;
-    font-size: 16px;
-    padding: 20px, 20px;
+    font-size: 20px;
 }
 
 .dinosaurs label:hover{
@@ -119,7 +125,7 @@ h1 {
 }
 
 .locations {
-    margin: 90px;
+    margin: 40px 220px 140px 220px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -134,19 +140,19 @@ h1 {
 }
 
 .locations label {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: 3px solid hsl(114, 25%, 41%);
     border-radius: 20%;
     background-color: #99d98c;
     height: 150px;
     width: 150px;
-    cursor:pointer;
-    color: #000000; 
+    cursor: pointer;
+    color: #2d1f08; 
     text-align: center;
     vertical-align: middle;
-    font-family: sans-serif, Arial;
-    font-size: 16px;
-    padding: 20px, 20px;
+    font-size: 20px;
 }
 
 .locations label:hover {
@@ -172,7 +178,7 @@ h1 {
 .name-greeting {
     font-size: 50px;
     font-family: 'Fredoka One';
-    color: #5c85e6;
+    color: #99d98c; 
 }
 
 .final-dino-pic {
@@ -180,16 +186,6 @@ h1 {
     width: 400px;
     bottom: 10px;
     transition: transform 1s;
-}
-
-
-/* .dino-pic-translate:hover {
-    transform: translate3d(20,20,20)
-} */
-
-.dino-pic-shift:hover {
-    transform: translateX(200px);
-    transform: translateX(-400px);
 }
 
 .dino-pic-jump:hover {
@@ -204,15 +200,13 @@ h1 {
     transform: rotate(-360deg);
 }
 
+.dino-pic-flip-two:hover {
+    transform: rotate(360deg);
+}
+
 .final-location-pic {
     width: 90vw;
 }
-
-/* .flip-element:hover {
-    transform: rotate(360deg);
-    transition: 2s;
-} */
-
 
 #new-dino-button-holder {
     padding-top: 70px;
@@ -221,42 +215,44 @@ h1 {
 }
 
 #new-dino-button {
-    background: hsl(115, 52%, 62%);
+    background: #99d98c;
     height: 60px;
-    width: 500px;
+    width: 400px;
     border-style: solid;
+    border-radius: 10px;
 }
 
 #new-dino-button:hover {
-    background-color: hsl(115, 32%, 47%);
+    background-color: #8ccb80;
 }
 
 a {
-    color: black;
+    color: #2d1f08;
     font-size: 25px;
     font-family: 'Fredoka One';
 }
 
 #submit-button {
+    align-items: center;
     background: #9cc9dd;
     height: 60px;
     width: 170px;
-    padding-bottom: 10px;
     border-style: solid;
+    border-width: 3px;
     border-color: #56add2;
     border-radius: 5px;
-    color: black;
     font-size: 25px;
     font-family: 'Fredoka One';
+    color: #2d1f08;
+    cursor: pointer;
 }
 
 #submit-button:hover {
-    box-shadow: inset 0 0 0 2em var(--hover);
-    background: #75a7bd;
+    background: #c9e5f2;
 }
 
 footer {
     margin-top: 50px;
     background-image: url('https://drive.google.com/uc?export=view&id=1ckjkdYPIrFnnLX1QOsXVHecpAzongn6W');
-    height: 4vh;
+    height: 10vh;
 }
