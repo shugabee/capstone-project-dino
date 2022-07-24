@@ -86,7 +86,7 @@ h1 {
 }
 
 .dinosaurs {
-    margin: 40px 220px 80px 220px;
+    margin: 40px 100px 80px 100px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -125,7 +125,7 @@ h1 {
 }
 
 .locations {
-    margin: 40px 220px 140px 220px;
+    margin: 40px 100px 140px 100px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
