@@ -16,7 +16,7 @@ const nameInputGreeting = () => {
 }
 
 const getDino = () => {
-    axios.get(`http://localhost:4000/api/dinosaurs/${dinoId}`)
+    axios.get(`https://capstone-project-dino.quest/api/dinosaurs/${dinoId}`)
     .then(( { data }) => {
         let dinoPic = document.createElement('img')
         dinoPic.src = data[0].dinosaur_url
@@ -40,7 +40,7 @@ const getDino = () => {
 };
 
 const getLocation = () => {
-    axios.get(`http://localhost:4000/api/locations/${locationId}`)
+    axios.get(`https://capstone-project-dino.quest/api/locations/${locationId}`)
     .then(( { data }) => {
         let locationPic = document.createElement('img')
         locationPic.src = data[0].location_url

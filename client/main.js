@@ -29,7 +29,7 @@ const createNewDino = (event) => {
         dinoUrl: dinoUrl.value
     }
     
-    axios.post('http://localhost:4000/api/dinosaur', reqBody)
+    axios.post('https://capstone-project-dino.quest/api/dinosaur', reqBody)
     .then((res) => {
         createDinoInput(res.data[0].dinosaur_id)
         dinoName.value = '';
